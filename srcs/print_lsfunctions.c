@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/31 17:01:42 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/31 19:17:43 by allauren         ###   ########.fr       */
+/*   Updated: 2018/03/31 21:48:49 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void		print_wfolder(t_list **lst)
 	t_data	*val;
 	t_list	*t;
 	t_list	*prev;
+	int		to;
 
 	t = *lst;
 	prev = NULL;

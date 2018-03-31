@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 10:03:21 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/31 19:32:53 by allauren         ###   ########.fr       */
+/*   Updated: 2018/03/31 21:14:55 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,6 @@ char		*getfolder_open(char *str, t_data *data)
 			break;
 	}
 	data->path = ft_strncat(data->path, str, i);
-	i = 0;
-	while (str[i])
-		i++;
-	if (i && str[i - 1] != '/')
-		data->path = ft_strcat(data->path, "/");
 	data->str = ft_strdup(&str[i]);
 	return (data->path);
 }
@@ -87,9 +82,10 @@ void		handlefirst(int ac, char **av, t_env *env)
 	{
 		isvalidfolder(IENV, env, !!env->current);
 		env->current = 0;
-		env->pass = 1;
+		env->pass++;
 		env->i++;
 	}
+	env->pass = env->pass > 1;
 	ft_lst_merge_sort((&env->lst), &ft_sortalpha);
 	print_wfolder(&env->lst);
 	print_ofolder(&env->lst);
@@ -104,4 +100,6 @@ void	ft_parse_args(int ac, char **av, t_env *env)
 			break;
 	env->current = (env->i == ac);
 	handlefirst(ac, av, env);
+	t_list *pute = NULL;
+	get_all_folder(&env->lst, pute, env);
 }

@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 08:04:12 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/31 19:35:17 by allauren         ###   ########.fr       */
+/*   Updated: 2018/03/31 22:10:47 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,10 @@ typedef struct	s_env
 	int			i;
 	int			current;
 	int			pass;
+	char		*tmp;
 	t_options	o;
 	t_list		*lst;
+	t_dirent	*odir;
 	DIR			*dir;
 
 }				t_env;
@@ -61,6 +63,7 @@ void	ft_parse_args(int ac, char **av, t_env *env);
 void	ft_usage(char *str);
 void	ft_lst_merge_sort(t_list **list, long int
 			(*f)(void *,void *));
+void		get_all_folder(t_list **lst, t_list *dirlst, t_env *env);
 /*
  ** Dir functions
  */
@@ -82,10 +85,12 @@ void		print_ofolder(t_list **lst);
  */
 void		deldata(t_data *data);
 t_list		*ft_deldate(t_list *prev, t_list *lst, t_list **start);
+void	elemdel(t_list **lst);
 /*
  * * sort functions
  */
 
 long int		ft_sortalpha(void *content1, void *content2);
+long int		ft_sortralpha(void *content1, void *content2);
 
 #endif

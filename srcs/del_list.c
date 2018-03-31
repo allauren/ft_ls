@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 14:34:52 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/31 19:17:49 by allauren         ###   ########.fr       */
+/*   Updated: 2018/03/31 22:10:38 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list		*ft_deldate(t_list *prev, t_list *lst, t_list **start)
 	t_data	*del;
 	t_list	*ret;
 
-	if (*start == lst)
+	if (start && *start == lst)
 		*start = (*(start))->next;
 	if (prev)
 		prev->next = lst->next;
@@ -37,6 +37,16 @@ t_list		*ft_deldate(t_list *prev, t_list *lst, t_list **start)
 	ft_memdel((void**)&lst->content);
 	ft_memdel((void**)&lst);
 	return(ret);
+}
+
+void	elemdel(t_list **lst)
+{
+	t_data	*del;
+	
+	del = (t_data*)(*lst)->content;
+	deldata(del);
+	ft_memdel((void**)&(*lst)->content);
+	ft_memdel((void**)lst);
 }
 
 t_list *newlstdata(t_data *data)
