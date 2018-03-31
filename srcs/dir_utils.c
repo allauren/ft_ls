@@ -6,47 +6,36 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 11:31:58 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/27 16:23:10 by allauren         ###   ########.fr       */
+/*   Updated: 2018/03/31 19:39:09 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-void	print_sorted(t_env *env)
+char		*concatpath(char *str, char *name)
 {
-	t_dirent	*odir;
+	char		*ret;
 
-	while((odir = readdir(env->dir)))
+	if (!(ret = ft_memalloc(ft_strlen(str) + ft_strlen(name) + 1)))
+		ft_alexis();
+	ft_strcat(ret, str);
+	ft_strcat(ret, name);
+	return (ret);
+}
+
+t_list		*get_all_folder(t_data *c, t_list **dirlst, t_env *env)
+{
+
+	while ((env->odir = readdir(c->dir)))
 	{
-		if (odir->d_name[0] != '.' || OPT.a)
-			ft_printf("%s\n", odir->d_name);
+		if (
+	
+	
 	}
+
+
+
 }
-
-void	print_rsorted(t_env *env)
-{
-		t_dirent *odir;
-
-		if((odir = readdir(env->dir)))
-		{
-			print_rsorted(env);
-		}
-		else
-			return;
-		if (odir->d_name[0] != '.' || OPT.a)
-			ft_printf("%s\n", odir->d_name);
-}
-
-
-int		displaydir(char *str, t_env *env)
-{
-
-	if (!(env->dir = opendir(str)))
-		return (0);
-	if (OPT.r)
-		print_rsorted(env);
-	else
-		print_sorted(env);
-	closedir(env->dir);
-	return (1);
-}
+			while ((d->odir = readdir(d->dir)))
+				if (ft_strequ(d->odir->d_name, d->str))
+					d->error = 1;

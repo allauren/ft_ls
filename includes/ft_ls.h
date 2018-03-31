@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 08:04:12 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/31 17:06:20 by allauren         ###   ########.fr       */
+/*   Updated: 2018/03/31 19:35:17 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,16 +67,25 @@ void	ft_lst_merge_sort(t_list **list, long int
 
 int		displaydir(char *str, t_env *env);
 int		ft_is_current_folder(char *str, t_env *env);
-void		ft_deldate(t_list *lst);
+char		*getfolder_open(char *str, t_data *data);
 /*
  *** Display functions
  */
 void		ft_print_folder(char *str, t_env *env);
 t_list *newlstdata(t_data *data);
+void	ft_wrong_folder(char *str);
+void	ft_usage(char *str);
+void		print_wfolder(t_list **lst);
+void		print_ofolder(t_list **lst);
 /*
  * * Del functions
  */
 void		deldata(t_data *data);
+t_list		*ft_deldate(t_list *prev, t_list *lst, t_list **start);
+/*
+ * * sort functions
+ */
 
+long int		ft_sortalpha(void *content1, void *content2);
 
 #endif
