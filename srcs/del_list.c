@@ -6,11 +6,20 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 14:34:52 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/28 15:20:30 by allauren         ###   ########.fr       */
+/*   Updated: 2018/03/31 17:01:29 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
+
+void		deldata(t_data *data)
+{
+
+	ft_strdel(&data->str);
+	ft_strdel(&data->path);
+	closedir(data->dir);
+	ft_memdel((void**)&data);
+}
 
 void		ft_deldate(t_list *lst)
 {

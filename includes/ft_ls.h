@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 08:04:12 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/28 15:20:16 by allauren         ###   ########.fr       */
+/*   Updated: 2018/03/31 17:06:20 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,12 @@ typedef struct	s_env
 typedef struct	s_data
 {
 	char		*str;
+	char		*name;
+	int			folder;
 	char		*path;
 	DIR			*dir;
-	t_dirent	odir;
+	t_dirent	*odir;
+	int			error;
 }				t_data;
 
 /*
@@ -70,5 +73,10 @@ void		ft_deldate(t_list *lst);
  */
 void		ft_print_folder(char *str, t_env *env);
 t_list *newlstdata(t_data *data);
+/*
+ * * Del functions
+ */
+void		deldata(t_data *data);
+
 
 #endif

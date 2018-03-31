@@ -6,22 +6,11 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 10:03:21 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/31 16:06:46 by allauren         ###   ########.fr       */
+/*   Updated: 2018/03/31 17:15:49 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
-
-void	ft_usage(char *str)
-{
-	ft_printf("ft_ls illegal option %s\n Usage ls[lRart]");
-	exit(-1);
-}
-
-void	ft_wrong_folder(char *str)
-{
-	ft_printf("ls: %s: No such file or directory\n", str);
-}
 
 int		ft_set_arg(char *str, t_env *env)
 {
@@ -46,72 +35,59 @@ int		ft_set_arg(char *str, t_env *env)
 	return (i != 1);
 }
 
-char		*getfolder_open(char *str)
+char		*getfolder_open(char *str, t_data *data)
 {
-	char	*tmp;
 	int		i;
 
 	i = 0;
-	if (!(tmp = ft_memalloc(ft_strlen(str))))
-	if (ft_strchr(str, '/')) 
+	if (!(data->path = ft_memalloc(ft_strlen(str))))
+		ft_alexis();
+	while (str[i])
 	{
-		while (str[i])
+		while (str[i] && str[i++] != '/')
+			continue;
+		if (str[i] && !(ft_strchr(&str[i], '/') ? *((char*)(ft_strchr(&str[i], '/') + 1)) : 0))
+			break;
+	}
+	data->path = ft_strncat(data->path, str, i);
+	data->str = ft_strdup(&str[i]);
+	return (data->path);
+}
+
+void		isvalidfolder(char *str, t_env *env, int t)
+{
+	t_data		*d;
+	char		*tmp;
+
+	if (!(d = ft_memalloc(sizeof(t_data))))
+		ft_alexis();
+		d->name = ft_strdup(str);
+	if (!(d->dir = open_dir(str)) 
+			|| !(d->error = 1))
+	{
+		d->folder = 1;
+		if (ft_strchr(str, '/') && (d->dir = open_dir(getfolder_open(str, d))))
 		{
-			while (str[i] && str[i++] != '/')
-				continue;
-			if (str[i] && !(ft_strchr(&str[i], '/') ? *((char*)(ft_strchr(&str[i], '/') + 1)) : 0))
-				break;
+			while ((d->odir = readdir(d->dir)))
+				if (ft_strequ(d->odir->d_name, d->str))
+					d->error = 1;
 		}
 	}
-	return (i ? 
-	
-
-
+	if (t)
+		ft_strdel(&str);
+	ft_lstadd(&env->lst, newlstdata(d));
 }
 
-int		isvalidfolder(char *str)
-{
-	DIR			*dir;
-	t_dirent	odir;
-	char		*tmp;
-	if (!(dir = open_dir(str)))
-	{
-		if (ft_strchr(str, '/') && (dir = open_dir(getfolder_open(str))))
-			L
-		else
-			wrongfolder(str);
-	
-	
-	}
-	closedir(dir);
-	return(1);
-}
-
-t_list		*handlefirst(int ac, char **av, t_env *env)
+void		*handlefirst(int ac, char **av, t_env *env)
 {
 	while (env->i < ac || env->current)
 	{
-		if (!(cnt = ft_memalloc(sizeof(t_data))))
-			ft_alexis();
-
-		cnt->str = ft_strdup(IENV);
-		ft_lstadd(&(env->lst), newlstdata(cnt));
+		ft_isvalidfolder(IENV, env, !!env->current);
 		env->current = 0;
 		env->i++;
+	}
+	ft_lst_merge_sort((&env->lst), &ft_sortalpha);
 	
-
-
-
-}
-
-long int		ft_sortalpha(void *content1, void *content2)
-{
-	t_data *cnt1;
-	t_data *cnt2;
-
-	cnt1 = content1;
-	cnt2 = content2;
-	return(ft_strcmp((char*) cnt1->str, (char*)cnt2->str));
 }
 
 void	ft_parse_args(int ac, char **av, t_env *env)
@@ -121,8 +97,7 @@ void	ft_parse_args(int ac, char **av, t_env *env)
 	while (++env->i < ac && av[env->i][0] == '-')
 		if (!ft_set_arg(av[env->i], env))
 			break;
-		env->current = env->i == ac;
-}
-	ft_lst_merge_sort((&env->lst), &ft_sortalpha);
+	env->current = (env->i == ac);
+	handlefirst(ac, av, env);
 	ft_get_folders(ac, av, env);
 }
