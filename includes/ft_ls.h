@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 08:04:12 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 19:29:28 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 21:29:27 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <dirent.h>
 #include <errno.h>
 #define  OPT env->o
+#define	NAME data->path + data->name
 #define	 IENV env->current ? "." : av[env->i]
 typedef struct dirent t_dirent;
 typedef	enum		s_bool
@@ -72,11 +73,11 @@ void		get_all_folder(t_list **lst, t_env *env);
 /*
  ** Dir functions
  */
-
-void		*concatpathd(t_data *data, char *str, char *name);
+void		concatpathd(t_data *data, char *str, char *name);
 int		displaydir(char *str, t_env *env);
 int		ft_is_current_folder(char *str, t_env *env);
 char		*getfolder_open(char *str, t_data *data);
+void	filldata(t_data **data, t_env *env, t_data *c);
 /*
  *** Display functions
  */

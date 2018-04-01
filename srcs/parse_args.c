@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 10:03:21 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 13:59:14 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 22:38:16 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,11 @@ int		ft_set_arg(char *str, t_env *env)
 char		*getfolder_open(char *str, t_data *data)
 {
 	int		i;
+	char	*ret;
 
 	i = 0;
-	if (!(data->path = ft_memalloc(ft_strlen(str) + 1)))
+	data->path = ft_strdup(str);
+	if (!(ret = ft_memalloc(ft_strlen(str) + 1)))
 		ft_alexis();
 	while (str[i] && ft_strchr(&str[i], '/'))
 	{
@@ -50,35 +52,36 @@ char		*getfolder_open(char *str, t_data *data)
 		if (str[i] && !(ft_strchr(&str[i], '/') ? *((char*)(ft_strchr(&str[i], '/') + 1)) : 0))
 			break;
 	}
-	data->path = !i ? ft_strcat(data->path, ".") : ft_strncat(data->path, str, i);
-	data->name = ft_strdup(&str[i]);
-	return (data->path);
+	data->name = i;
+	ret = !i ? ft_strcat(ret, ".") : ft_strncat(ret, str, i);
+	return (ret);
 }
 
 void		isvalidfolder(char *str, t_env *env)
 {
 	t_data		*d;
 	t_dirent	*odir;
-	char	*path;
+	char		*path;
 
+	path = NULL;
 	if (!(d = ft_memalloc(sizeof(t_data))))
 		ft_alexis();
-	d->name = ft_strdup(str);
+	path = getfolder_open(str, d);
 	if (!(d->dir = opendir(str)) 
 			|| !(d->error = 1))
-		if ((d->folder = 1) 
-				&& (d->dir = opendir(getfolder_open(str, d))))
+		if ((d->folder = 1)
+				&& (d->dir = opendir((path = getfolder_open(str, d)))))
+		{
 			while ((odir = readdir(d->dir)))
-				if (ft_strequ(odir->d_name, d->name))
+				if (ft_strequ(odir->d_name, d->path + d->name))
 				{
 					d->error = 1;
-					ft_strdel(&d->path);
-					d->path = concatpath(d->path, d->name);
-					if(lstat(path, &d->buf) == -1 && ft_printf("coucou") &&  d->error++)
-						ft_wrong_folder(d->name);
-					ft_strdel(&path);
+					if(lstat(d->path, &d->buf) == -1  &&  d->error++)
+						ft_wrong_folder(d->path + d->name);
 				}
-	ft_lstadd(&env->lst, newlstdata(d));
+		}
+					ft_strdel(&path);
+			ft_lstadd(&env->lst, newlstdata(d));
 }
 
 void		handlefirst(int ac, char **av, t_env *env)

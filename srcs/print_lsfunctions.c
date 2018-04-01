@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/31 17:01:42 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 18:30:29 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 23:32:46 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void		print_all(t_data *val, t_env *env)
 
 	c = '-';
 	if (!OPT.l)
-		ft_printf("%s\n", val->name);
+		ft_printf("%s\n", val->path + val->name);
 	else if (val->error != 3)
 	{
 		tmp = ctime(&val->buf.st_mtimespec.tv_sec);
@@ -69,16 +69,16 @@ void		print_all(t_data *val, t_env *env)
 		if (c == 'l')
 			print_link(val);
 		else
-			ft_printf("%s\n", val->name);
+			ft_printf("%s\n", val->path + val->name);
 	}
 	else
-		ft_wrong_folder(val->name);
+		ft_wrong_folder(val->path + val->name);
 }
 
 void		print_dir(t_env *env, t_data *data, int i)
 {
 	if(env->pass)
-		ft_printf(env->pass == 1 ? "%s:\n" : "\n%s:\n", data->name) ;
+		ft_printf(env->pass == 1 ? "%s:\n" : "\n%s:\n", NAME) ;
 	else
 		env->pass = 2;
 	if (OPT.l && i)
@@ -102,7 +102,8 @@ void		print_wfolder(t_list **lst)
 		val = (t_data *)t->content;
 		if (!val->error)
 		{
-			ft_wrong_folder(val->name);
+			env->pass = 2;
+			ft_wrong_folder(val->path + val->name);
 			t = ft_deldate(prev, t, lst);
 		}
 		else
