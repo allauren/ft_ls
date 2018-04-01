@@ -6,29 +6,32 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/31 17:01:42 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 13:11:58 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 07:52:14 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
 
-void		select_type(mode_t mode, char *c)
+void		print_type(mode_t mode)
 {
+	char c;
+
 	if ((mode & S_IFREG)== S_IFREG)
-		*c = '-';
+		c = '-';
 	if ((mode & S_IFDIR) == S_IFDIR)
-		*c = 'd';
+		c = 'd';
 	if ((mode & S_IFCHR) == S_IFCHR)
-		*c = 'c';
+		c = 'c';
 	if ((mode & S_IFBLK) == S_IFBLK)
-		*c = 'b';
+		c = 'b';
 	if ((mode & S_IFLNK) == S_IFLNK)
-		*c = 'l';
+		c = 'l';
 	if ((mode & S_IFSOCK) == S_IFSOCK)
-		*c = 's';
+		c = 's';
 	if ((mode & S_IFIFO) == S_IFIFO)
-		*c = 'p';
+		c = 'p';
+	ft_printf("%c", c);
 }
 
 void	print_mode(mode_t mode)
@@ -44,51 +47,20 @@ void	print_mode(mode_t mode)
 		i++;
 	}
 	buf[9] = '\0';
-	ft_printf("%s ", buf);
+	print_type(mode);
+	ft_printf("%s", buf);
 }
 
-void		print_all(t_data *val, t_env *env)
+void		print_all(t_data *val)
 {
-	char c;
-	char *tmp;
-
-	c = '-';
 	if (!OPT.l)
 		ft_printf("%s\n", val->name);
-	else if (val->error != 3)
-	{
-		tmp = ctime(&val->buf.st_mtimespec.tv_sec);
-		select_type(val->buf.st_mode, &c);
-		ft_printf("%c", c);
-		print_mode(val->buf.st_mode);
-		ft_printf("%3d", val->buf.st_nlink);
-		ft_printf("%10s ", getpwuid(val->buf.st_uid)->pw_name);
-		ft_printf("%10s ", getgrgid(val->buf.st_gid)->gr_name);
-		print_size(val, c);
-		tmp[ft_strlen(tmp) - 9] = '\0';
-		ft_printf("%10s ", &tmp[4]);
-		if (c == 'l')
-			print_link(val);
-		else
-			ft_printf("%s\n", val->name);
-	}
 	else
-		ft_wrong_folder(val->name);
+		print_mode
+
 }
 
-void		print_dir(t_env *env, t_data *data, int i)
-{
-	if(env->pass)
-		ft_printf(env->pass == 1 ? "%s:\n" : "\n%s:\n", data->name) ;
-	else
-		env->pass = 2;
-	if (OPT.l && i)
-	{
-		ft_printf("total %d\n", env->tot);
-		env->tot = 0;
-		env->current = 0;
-	}
-}
+
 
 void		print_wfolder(t_list **lst)
 {

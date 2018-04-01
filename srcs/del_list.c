@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 14:34:52 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/31 22:10:38 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 11:40:59 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void		deldata(t_data *data)
 {
 
-	ft_strdel(&data->str);
 	ft_strdel(&data->name);
 	ft_strdel(&data->path);
 	if (data->dir)

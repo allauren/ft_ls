@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 11:31:58 by allauren          #+#    #+#             */
-/*   Updated: 2018/03/31 22:44:35 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 11:45:09 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,64 +24,84 @@ char		*concatpath(char *str, char *name)
 	return (ret);
 }
 
-void		initfolder(t_env *env, t_list **lst)
+void		initfolder(t_env *env, t_list **lst, char *tmp, int err)
 {
-	t_data *content;
+	t_data		*content;
 
 	if (!(content = ft_memalloc(sizeof(t_data))))
 		ft_alexis();
 	content->dir = env->dir;
-	content->name = env->tmp;
+	content->error = err;
+	content->name = ft_strdup(tmp);
 	ft_lstadd(lst, newlstdata(content));
 }
 
 void		recucall(t_list **lst, t_list **dirlst, t_env *env, t_data *c)
 {
 	t_data	*data;
+	char	*tmp;
+	int		err;
 
 	if (lst && *lst)
 	{
-			data = (t_data*)(*lst)->content;
-			env->pass = ft_printf("%s\n", data->name);
-			if ((*lst)->next)
-				recucall(&(*lst)->next, dirlst, env, c);
-			if (OPT.R && !ft_strequ(data->name, ".") 
-						&& !ft_strequ(data->name, "..")
-						&& (env->dir = opendir((env->tmp = concatpath(c->name, data->name)))))
-					initfolder(env, dirlst);
-			else if (env->tmp)
-				ft_strdel(&env->tmp);
-			elemdel(lst);
-//			ft_printf(" dir %s\n", (env->tmp = concatpath(c->name, data->name)));
+		err = 0;
+		data = (t_data*)(*lst)->content;
+		print_all(data, env);
+		if ((*lst)->next)
+			recucall(&(*lst)->next, dirlst, env, c);
+		tmp = concatpath(c->name, data->name);
+		if (!data->folder && OPT.R && !ft_strequ(data->name, ".")
+				&& !ft_strequ(data->name, "..") && is_dir(tmp, &data->buf))
+		{
+			env->dir = opendir(tmp);
+			initfolder(env, dirlst, tmp, err);
+		}
+		ft_strdel(&tmp);
+		elemdel(lst);
 	}
-
 }
 
-void		get_all_folder(t_list **lst, t_list *dirlst, t_env *env)
+void		get_all_folder(t_list **lst, t_env *env)
 {
 	t_data	*data;
 	t_data	*c;
 	t_list	*tmp;
 	t_list *print;
 
-	print = NULL;
+	tmp = NULL;
 	while (lst && *lst)
 	{
+		print = NULL;
 		c = (t_data*)(*lst)->content;
-		env->pass = env->pass ? ft_printf(env->pass == 1 ? "%s:\n" : "\n%s:\n",c->name) : 1;
-		while ((env->odir = readdir(c->dir)))
-		{
-			if (env->odir->d_name[0] != '.' || OPT.a)
+			if (c->dir)
 			{
-				if(!(data = ft_memalloc(sizeof(t_data))))
-					ft_alexis();
-				data->name = ft_strdup(env->odir->d_name);
-				ft_lstadd(&print, newlstdata(data));
+			while ((env->odir = readdir(c->dir)))
+			{
+				if (env->odir->d_name[0] != '.' || OPT.a)
+				{
+					if(!(data = ft_memalloc(sizeof(t_data))))
+						ft_alexis();
+					data->folder = env->odir->d_type ?env->odir->d_type != DT_DIR : 0;
+					data->name = ft_strdup(env->odir->d_name);
+					data->path = concatpath(c->name, data->name);
+					if(lstat(data->path, &data->buf) == -1 && (data->error = 3))
+						env->current = 1;
+					else if ((!ft_strequ(env->odir->d_name,("."))
+							&& !ft_strequ(env->odir->d_name, (".."))))
+						env->tot += data->buf.st_blocks;
+					ft_lstadd(&print, newlstdata(data));
+				}
 			}
-		}
 		ft_lst_merge_sort(&print, &ft_sortalpha);
-		recucall(&print, &dirlst, env, c);
-		get_all_folder(&dirlst, NULL, env);
+		print_dir(env, c, !!print);
+		recucall(&print, &tmp, env, c);
+		get_all_folder(&tmp,env);
+			}
+		else
+		{
+			print_dir(env, c, !!print);
+			ft_wrong_folder(c->name);
+		}
 		*lst = ft_deldate(NULL, *lst, NULL);
 	}
 }
