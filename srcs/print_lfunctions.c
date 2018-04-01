@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/01 12:09:18 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 13:25:07 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 17:45:17 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,17 @@ void		print_link(t_data *data)
 	ft_strdel(&lnk);
 }
 
+void		print_right(t_data *val)
+{
+		if(getpwuid(val->buf.st_uid))
+			ft_printf("%10s ", getpwuid(val->buf.st_uid)->pw_name);
+		else
+			ft_printf("%10d ", val->buf.st_gid);
+		if(getgrgid(val->buf.st_gid))
+			ft_printf("%10s ",getgrgid(val->buf.st_gid)->gr_name);
+		else
+			ft_printf("%10d ", val->buf.st_gid);
+}
 
 void		print_size(t_data *data, char c)
 {

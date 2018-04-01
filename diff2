@@ -1,3 +1,4 @@
+42c
 Applications
 CW_corrige
 CW_save
@@ -30,6 +31,864 @@ pythonrigolo
 test
 test2
 test_CW
+
+/Users/allauren/42c:
+42FileChecker.sh
+LICENCE
+README.md
+assets
+includes
+maintest
+moulitest_42projects
+srcs
+tmp
+
+/Users/allauren/42c/assets:
+42FileChecker.ascii
+42FileChecker.png
+42FileChecker_250x250.png
+42FileChecker_416x416.png
+42FileChecker_cropped.png
+README.md
+
+/Users/allauren/42c/includes:
+display
+external_repositories
+main.sh
+projects
+utils
+
+/Users/allauren/42c/includes/display:
+display_center.sh
+display_credits.sh
+display_error.sh
+display_header.sh
+display_leftandright.sh
+display_menu.sh
+display_spinner.sh
+display_splash_screen.sh
+display_success.sh
+display_top.sh
+
+/Users/allauren/42c/includes/external_repositories:
+external_repository_42shelltester.sh
+external_repository_fillit_checker.sh
+external_repository_libftunittest.sh
+external_repository_maintest.sh
+external_repository_moulitest.sh
+
+/Users/allauren/42c/includes/projects:
+fillit
+ft_ls
+ft_printf
+generic_tests
+gnl
+libft
+libftasm
+minishell
+
+/Users/allauren/42c/includes/projects/fillit:
+fillit_main.sh
+
+/Users/allauren/42c/includes/projects/ft_ls:
+ft_ls_main.sh
+
+/Users/allauren/42c/includes/projects/ft_printf:
+ft_printf_list.sh
+ft_printf_main.sh
+
+/Users/allauren/42c/includes/projects/generic_tests:
+generic_tests_main.sh
+
+/Users/allauren/42c/includes/projects/gnl:
+get_next_line_main.sh
+
+/Users/allauren/42c/includes/projects/libft:
+libft_main.sh
+
+/Users/allauren/42c/includes/projects/libftasm:
+libftasm_list.sh
+libftasm_main.sh
+
+/Users/allauren/42c/includes/projects/minishell:
+minishell_main.sh
+
+/Users/allauren/42c/includes/utils:
+utils.sh
+utils_auteur.sh
+utils_authorized_functions.sh
+utils_configure.sh
+utils_exit.sh
+utils_fileexists.sh
+utils_forbidden_functions.sh
+utils_launch_tests.sh
+utils_leaks.sh
+utils_makefile.sh
+utils_norme.sh
+utils_signals.sh
+utils_speedtest.sh
+utils_update.sh
+
+/Users/allauren/42c/maintest:
+README.md
+ft_ls
+getnextline
+libft
+
+/Users/allauren/42c/maintest/ft_ls:
+diff_me.sh
+t_dir
+
+/Users/allauren/42c/maintest/ft_ls/t_dir:
+42
+couloir
+ln_couloir
+
+/Users/allauren/42c/maintest/getnextline:
+cmp.txt
+main.c
+
+/Users/allauren/42c/maintest/libft:
+main.c
+
+/Users/allauren/42c/moulitest_42projects:
+Makefile
+README.md
+config.ini
+config.ini.template
+ft_ls_tests
+ft_printf_tests
+get_next_line_tests
+libft_tests
+libftasm_tests
+template_tests
+testframework
+
+/Users/allauren/42c/moulitest_42projects/ft_ls_tests:
+Makefile
+Makefile_cfg.mk
+main.c
+project.h
+tests
+utils.c
+
+/Users/allauren/42c/moulitest_42projects/ft_ls_tests/tests:
+00_test_without_opt.spec.c
+01_test_opt_R.spec.c
+02_test_sorted.spec.c
+03_test_multiple_dir.spec.c
+04_test_opt_a.spec.c
+05_test_opt_r.spec.c
+06_test_opt_rR.spec.c
+07_test_opt_t.spec.c
+07_test_opt_tR_bis.spec.c
+08_test_opt_l.spec.c
+09_test_opt_aR.spec.c
+10_test_opt_aRl.spec.c
+11_test_single_file.spec.c
+12_test_permissions.spec.c
+13_test_hyphen_hard.spec.c
+14_test_hyphen_harder.spec.c
+20_test_error_handling.spec.c
+21_test_symlink.spec.c
+22_test_no_username.spec.c
+23_test_no_groupname.spec.c
+24_test_multiple_files.spec.c
+25_perm_special_bits.spec.c
+26_perm_special_bits_dir.spec.c
+30_test_opt_mix.spec.c
+bonus_01_test_opt_d.spec.c
+bonus_02_test_opt_p.spec.c
+bonus_03_test_opt_U.spec.c
+bonus_04_test_opt_c.spec.c
+bonus_05_test_opt_S.spec.c
+bonus_06_test_opt_u.spec.c
+bonus_07_test_opt_A.spec.c
+bonus_08_test_opt_1.spec.c
+bonus_09_test_opt_f.spec.c
+bonus_10_test_opt_T.spec.c
+bonus_11_test_opt_g.spec.c
+bonus_12_test_opt_o_og.spec.c
+bonus_13_test_opt_F_Fp.spec.c
+bonus_20_test_opt_comb_aA.spec.c
+bonus_21_test_opt_mix_sort.spec.c
+bonus_22_test_sort_comb.spec.c
+bonus_30_test_xattr.spec.c
+bonus_31_test_usr_xattr.spec.c
+bonus_32_test_ACL.spec.c
+bonus_34_test_redis.spec.c
+bonus_40_dir_root.spec.c
+buggy_ls_behaviors.c
+sys_00_test_user_bin.spec.c
+sys_01_test_dev.spec.c
+sys_02_test_etc.spec.c
+sys_03_test_many_files.spec.c
+sys_04_test_var_run.spec.c
+
+/Users/allauren/42c/moulitest_42projects/ft_printf_tests:
+Makefile
+Makefile_cfg.mk
+main.c
+project.h
+tests
+utils.c
+
+/Users/allauren/42c/moulitest_42projects/ft_printf_tests/tests:
+00_no_conv.spec.c
+01_conv_s_simple.spec.c
+02_conv_s_multiple.spec.c
+03_conv_d.spec.c
+04_conv_p.spec.c
+05_percent_escape.spec.c
+06_mix_sdp_percent.spec.c
+07_conv_S.spec.c
+08_conv_D.spec.c
+09_conv_i.spec.c
+10_conv_o.spec.c
+11_conv_O.spec.c
+12_conv_u.spec.c
+13_conv_U.spec.c
+14_conv_x.spec.c
+15_conv_X.spec.c
+16_conv_c.spec.c
+17_conv_C.spec.c
+18_mix_all_previous.spec.c
+40_length_modif_l.spec.c
+41_length_modif_ll.spec.c
+42_length_modif_h.spec.c
+43_length_modif_hh.spec.c
+43_length_modif_j.spec.c
+44_length_modif_z.spec.c
+45_length_modif_edge_cases.spec.c
+50_min_width.spec.c
+51_min_width_flag_minus.spec.c
+52_min_width_flag_zero.spec.c
+53_min_width_non_valid_conv.spec.c
+60_flag_sharp.spec.c
+61_flag_plus.spec.c
+62_flag_space.spec.c
+69_flag_mix.spec.c
+70_precision_for_diu.spec.c
+71_precision_for_oOxX.spec.c
+72_precision_for_sS.spec.c
+73_precision_for_cC.spec.c
+74_precision_for_p.spec.c
+75_precision_for_percent.spec.c
+79_precision_mixed_with_flags.spec.c
+90_incomptbl_values_sdpi.spec.c
+91_incomptbl_values_uUSDcC.spec.c
+92_incomptbl_values_oOxX.spec.c
+bonus_01_wildcard.spec.c
+bonus_02_wildcard_multi.spec.c
+bonus_03_wildcard_flag_mix.spec.c
+bonus_10_conv_fF.spec.c
+
+/Users/allauren/42c/moulitest_42projects/get_next_line_tests:
+Makefile
+Makefile_cfg.mk
+main.c
+project.h
+tests
+utils.c
+
+/Users/allauren/42c/moulitest_42projects/get_next_line_tests/tests:
+01_test_simple.spec.c
+02_test_eof_with_close.spec.c
+03_test_medium_string.spec.c
+04_test_return_values.spec.c
+05_test_error_handling.spec.c
+06_test_line_of_08.spec.c
+07_test_two_lines_of_08.spec.c
+08_test_few_lines_of_08.spec.c
+09_test_line_of_16.spec.c
+10_test_two_lines_of_16.spec.c
+11_test_few_lines_of_16.spec.c
+12_test_line_of_4.spec.c
+13_test_two_lines_of_4.spec.c
+14_test_few_lines_of_4.spec.c
+15_test_line_without_nl.spec.c
+16_test_line_of_8_without_nl.spec.c
+17_test_line_of_16_without_nl.spec.c
+30_bonus_multiple_fd.spec.c
+40_hard_test_medium_string.spec.c
+41_hard_test_large_file.spec.c
+42_hard_test_one_big_fat_line.spec.c
+
+/Users/allauren/42c/moulitest_42projects/libft_tests:
+Makefile
+Makefile_cfg.mk
+main.c
+project.h
+tests
+utils.c
+
+/Users/allauren/42c/moulitest_42projects/libft_tests/tests:
+00_part1_ft_atoi.spec.c
+00_part1_ft_bzero.spec.c
+00_part1_ft_isalnum.spec.c
+00_part1_ft_isalpha.spec.c
+00_part1_ft_isascii.spec.c
+00_part1_ft_isdigit.spec.c
+00_part1_ft_isprint.spec.c
+00_part1_ft_memccpy.spec.c
+00_part1_ft_memchr.spec.c
+00_part1_ft_memcmp.spec.c
+00_part1_ft_memcpy.spec.c
+00_part1_ft_memmove.spec.c
+00_part1_ft_memset.spec.c
+00_part1_ft_strcat.spec.c
+00_part1_ft_strchr.spec.c
+00_part1_ft_strcmp.spec.c
+00_part1_ft_strcpy.spec.c
+00_part1_ft_strdup.spec.c
+00_part1_ft_strlcat.spec.c
+00_part1_ft_strlen.spec.c
+00_part1_ft_strncat.spec.c
+00_part1_ft_strncmp.spec.c
+00_part1_ft_strncpy.spec.c
+00_part1_ft_strnstr.spec.c
+00_part1_ft_strrchr.spec.c
+00_part1_ft_strstr.spec.c
+00_part1_ft_tolower.spec.c
+00_part1_ft_toupper.spec.c
+01_part2_ft_itoa.spec.c
+01_part2_ft_memalloc.spec.c
+01_part2_ft_memdel.spec.c
+01_part2_ft_putchar.spec.c
+01_part2_ft_putchar_fd.spec.c
+01_part2_ft_putendl.spec.c
+01_part2_ft_putendl_fd.spec.c
+01_part2_ft_putnbr.spec.c
+01_part2_ft_putnbr_fd.spec.c
+01_part2_ft_putstr.spec.c
+01_part2_ft_putstr_fd.spec.c
+01_part2_ft_strclr.spec.c
+01_part2_ft_strdel.spec.c
+01_part2_ft_strequ.spec.c
+01_part2_ft_striter.spec.c
+01_part2_ft_striteri.spec.c
+01_part2_ft_strjoin.spec.c
+01_part2_ft_strmap.spec.c
+01_part2_ft_strmapi.spec.c
+01_part2_ft_strnequ.spec.c
+01_part2_ft_strnew.spec.c
+01_part2_ft_strsplit.spec.c
+01_part2_ft_strsub.spec.c
+01_part2_ft_strtrim.spec.c
+02_bonus_ft_lstadd.spec.c
+02_bonus_ft_lstdel.spec.c
+02_bonus_ft_lstdelone.spec.c
+02_bonus_ft_lstiter.spec.c
+02_bonus_ft_lstmap.spec.c
+02_bonus_ft_lstnew.spec.c
+
+/Users/allauren/42c/moulitest_42projects/libftasm_tests:
+Makefile
+Makefile_cfg.mk
+main.c
+project.h
+tests
+utils.c
+
+/Users/allauren/42c/moulitest_42projects/libftasm_tests/tests:
+01_part1_ft_bzero.spec.c
+01_part1_ft_isalnum.spec.c
+01_part1_ft_isalpha.spec.c
+01_part1_ft_isascii.spec.c
+01_part1_ft_isdigit.spec.c
+01_part1_ft_isprint.spec.c
+01_part1_ft_tolower.spec.c
+01_part1_ft_toupper.spec.c
+02_part2_ft_memcpy.spec.c
+02_part2_ft_memset.spec.c
+02_part2_ft_puts.spec.c
+02_part2_ft_strcat.spec.c
+02_part2_ft_strdup.spec.c
+02_part2_ft_strlen.spec.c
+03_part3_ft_cat.spec.c
+
+/Users/allauren/42c/moulitest_42projects/template_tests:
+Makefile
+Makefile_cfg.mk
+main.c
+project.h
+tests
+utils.c
+
+/Users/allauren/42c/moulitest_42projects/template_tests/tests:
+00_no_conv.spec.c
+
+/Users/allauren/42c/moulitest_42projects/testframework:
+fake_rendu
+v2
+v3
+v3_templates
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu:
+ft_ls
+ft_printf
+ft_printf_with_libft
+get_next_line
+get_next_line_with_libft
+libft
+libft_part1
+libft_part2
+libft_to_be_symliked
+makefile_templates
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/ft_ls:
+Makefile
+Makefile_cfg.mk
+main.c
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/ft_printf:
+Makefile
+Makefile_cfg.mk
+ft_printf.c
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/ft_printf_with_libft:
+Makefile
+Makefile_cfg.mk
+ft_printf.c
+libft
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/get_next_line:
+get_next_line.c
+get_next_line.h
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/get_next_line_with_libft:
+get_next_line.c
+get_next_line.h
+libft
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/libft:
+Makefile
+Makefile_cfg.mk
+ft_atoi.c
+ft_bzero.c
+ft_isalnum.c
+ft_isalpha.c
+ft_isascii.c
+ft_isblank.c
+ft_isdigit.c
+ft_islower.c
+ft_isprint.c
+ft_isspace.c
+ft_isupper.c
+ft_itoa.c
+ft_lstadd.c
+ft_lstdel.c
+ft_lstdelone.c
+ft_lstiter.c
+ft_lstmap.c
+ft_lstnew.c
+ft_memalloc.c
+ft_memccpy.c
+ft_memchr.c
+ft_memcmp.c
+ft_memcpy.c
+ft_memdel.c
+ft_memmove.c
+ft_memset.c
+ft_putchar.c
+ft_putchar_fd.c
+ft_putendl.c
+ft_putendl_fd.c
+ft_putnbr.c
+ft_putnbr_fd.c
+ft_putnendl.c
+ft_putnstr.c
+ft_putstr.c
+ft_putstr_fd.c
+ft_strcat.c
+ft_strchr.c
+ft_strclr.c
+ft_strcmp.c
+ft_strcpy.c
+ft_strdel.c
+ft_strdup.c
+ft_strequ.c
+ft_striter.c
+ft_striteri.c
+ft_strjoin.c
+ft_strlcat.c
+ft_strlen.c
+ft_strlowcase.c
+ft_strmap.c
+ft_strmapi.c
+ft_strncat.c
+ft_strncmp.c
+ft_strncpy.c
+ft_strnequ.c
+ft_strnew.c
+ft_strnstr.c
+ft_strrchr.c
+ft_strrev.c
+ft_strsplit.c
+ft_strstr.c
+ft_strsub.c
+ft_strtrim.c
+ft_strupcase.c
+ft_tolower.c
+ft_toupper.c
+libft.h
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/libft_part1:
+Makefile
+Makefile_cfg.mk
+ft_atoi.c
+ft_bzero.c
+ft_isalnum.c
+ft_isalpha.c
+ft_isascii.c
+ft_isblank.c
+ft_isdigit.c
+ft_islower.c
+ft_isprint.c
+ft_isspace.c
+ft_isupper.c
+ft_itoa.c
+ft_lstadd.c
+ft_lstdel.c
+ft_lstdelone.c
+ft_lstiter.c
+ft_lstmap.c
+ft_lstnew.c
+ft_memalloc.c
+ft_memccpy.c
+ft_memchr.c
+ft_memcmp.c
+ft_memcpy.c
+ft_memdel.c
+ft_memmove.c
+ft_memset.c
+ft_putchar.c
+ft_putchar_fd.c
+ft_putendl.c
+ft_putendl_fd.c
+ft_putnbr.c
+ft_putnbr_fd.c
+ft_putnendl.c
+ft_putnstr.c
+ft_putstr.c
+ft_putstr_fd.c
+ft_strcat.c
+ft_strchr.c
+ft_strclr.c
+ft_strcmp.c
+ft_strcpy.c
+ft_strdel.c
+ft_strdup.c
+ft_strequ.c
+ft_striter.c
+ft_striteri.c
+ft_strjoin.c
+ft_strlcat.c
+ft_strlen.c
+ft_strlowcase.c
+ft_strmap.c
+ft_strmapi.c
+ft_strncat.c
+ft_strncmp.c
+ft_strncpy.c
+ft_strnequ.c
+ft_strnew.c
+ft_strnstr.c
+ft_strrchr.c
+ft_strrev.c
+ft_strsplit.c
+ft_strstr.c
+ft_strsub.c
+ft_strtrim.c
+ft_strupcase.c
+ft_tolower.c
+ft_toupper.c
+libft.h
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/libft_part2:
+Makefile
+Makefile_cfg.mk
+ft_atoi.c
+ft_bzero.c
+ft_isalnum.c
+ft_isalpha.c
+ft_isascii.c
+ft_isblank.c
+ft_isdigit.c
+ft_islower.c
+ft_isprint.c
+ft_isspace.c
+ft_isupper.c
+ft_itoa.c
+ft_lstadd.c
+ft_lstdel.c
+ft_lstdelone.c
+ft_lstiter.c
+ft_lstmap.c
+ft_lstnew.c
+ft_memalloc.c
+ft_memccpy.c
+ft_memchr.c
+ft_memcmp.c
+ft_memcpy.c
+ft_memdel.c
+ft_memmove.c
+ft_memset.c
+ft_putchar.c
+ft_putchar_fd.c
+ft_putendl.c
+ft_putendl_fd.c
+ft_putnbr.c
+ft_putnbr_fd.c
+ft_putnendl.c
+ft_putnstr.c
+ft_putstr.c
+ft_putstr_fd.c
+ft_strcat.c
+ft_strchr.c
+ft_strclr.c
+ft_strcmp.c
+ft_strcpy.c
+ft_strdel.c
+ft_strdup.c
+ft_strequ.c
+ft_striter.c
+ft_striteri.c
+ft_strjoin.c
+ft_strlcat.c
+ft_strlen.c
+ft_strlowcase.c
+ft_strmap.c
+ft_strmapi.c
+ft_strncat.c
+ft_strncmp.c
+ft_strncpy.c
+ft_strnequ.c
+ft_strnew.c
+ft_strnstr.c
+ft_strrchr.c
+ft_strrev.c
+ft_strsplit.c
+ft_strstr.c
+ft_strsub.c
+ft_strtrim.c
+ft_strupcase.c
+ft_tolower.c
+ft_toupper.c
+libft.h
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/libft_to_be_symliked:
+Makefile
+Makefile_cfg.mk
+ft_strcat.c
+includes
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/libft_to_be_symliked/includes:
+libft.h
+
+/Users/allauren/42c/moulitest_42projects/testframework/fake_rendu/makefile_templates:
+Makefile
+
+/Users/allauren/42c/moulitest_42projects/testframework/v2:
+testframework.c
+testframework.h
+utils.c
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3:
+Makefile
+includes
+srcs
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3/includes:
+capture.h
+color.h
+fw.h
+mt.h
+mt_lst.h
+mt_xstdio.h
+suite.h
+test.h
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3/srcs:
+capture
+mt
+mt_lst
+mt_xstdio
+suite
+test
+utils
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3/srcs/capture:
+capture.c
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3/srcs/mt:
+mt_count_failed_suites.c
+mt_count_failed_tests.c
+mt_count_tests.c
+mt_create.c
+mt_del.c
+mt_exec.c
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3/srcs/mt_lst:
+mt_lst__link.c
+mt_lst_count.c
+mt_lst_create_elem.c
+mt_lst_del.c
+mt_lst_del_elem.c
+mt_lst_find.c
+mt_lst_find_by_value.c
+mt_lst_get.c
+mt_lst_init.c
+mt_lst_iter.c
+mt_lst_len.c
+mt_lst_map.c
+mt_lst_pop.c
+mt_lst_push.c
+mt_lst_reduce.c
+mt_lst_reducei.c
+mt_lstelem_del.c
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3/srcs/mt_xstdio:
+mt_xstdio_isempty.c
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3/srcs/suite:
+suite_count_failed_tests.c
+suite_count_tests.c
+suite_create.c
+suite_del.c
+suite_exec.c
+suite_filter_failed.c
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3/srcs/test:
+test_assert.c
+test_assert_prep.c
+test_create.c
+test_del.c
+test_exec.c
+test_filter_failed.c
+test_get_failure_type.c
+test_print.c
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3/srcs/utils:
+utils.h
+
+/Users/allauren/42c/moulitest_42projects/testframework/v3_templates:
+Makefile_template.mk
+
+/Users/allauren/42c/srcs:
+gnl
+libftasm
+printf
+
+/Users/allauren/42c/srcs/gnl:
+gnl10.c
+gnl10.txt
+gnl11.c
+gnl11_1.txt
+gnl11_2.txt
+gnl1_1.c
+gnl1_1.txt
+gnl1_2.c
+gnl1_2.txt
+gnl1_3.c
+gnl1_3.txt
+gnl2_1.c
+gnl2_2.c
+gnl2_3.c
+gnl3_1.c
+gnl3_1.txt
+gnl3_2.c
+gnl3_2.txt
+gnl3_3.c
+gnl3_3.txt
+gnl4_1.c
+gnl4_2.c
+gnl4_3.c
+gnl5_1.c
+gnl5_1.txt
+gnl5_2.c
+gnl5_2.txt
+gnl5_3.c
+gnl5_3.txt
+gnl6_1.c
+gnl6_2.c
+gnl6_3.c
+gnl7_1.c
+gnl7_1.txt
+gnl7_2.c
+gnl7_2.txt
+gnl7_3.c
+gnl7_3.txt
+gnl8_1.c
+gnl8_2.c
+gnl8_3.c
+gnl9_1.c
+gnl9_2.c
+gnl9_2.txt
+
+/Users/allauren/42c/srcs/libftasm:
+atoi.c
+bzero.c
+cat.c
+ft_atoi.c
+ft_bzero.c
+ft_cat.c
+ft_cat.txt
+ft_is.c
+ft_isdigit.c
+ft_islower.c
+ft_isnumber.c
+ft_isspace.c
+ft_isupper.c
+ft_memalloc.c
+ft_memchr.c
+ft_memcmp.c
+ft_memcpy.c
+ft_memset.c
+ft_puts.c
+ft_strcat.c
+ft_strchr.c
+ft_strdup.c
+ft_strlen.c
+ft_strrchr.c
+is.c
+isdigit.c
+islower.c
+isnumber.c
+isspace.c
+isupper.c
+memalloc.c
+memchr.c
+memcmp.c
+memcpy.c
+memset.c
+puts.c
+strcat.c
+strchr.c
+strdup.c
+strlen.c
+strrchr.c
+
+/Users/allauren/42c/srcs/printf:
+ft_printf_0.c
+ft_printf_d.c
+ft_printf_f.c
+ft_printf_leaks.c
+ft_printf_o.c
+ft_printf_s.c
+ft_printf_u.c
+ft_printf_x.c
+printf_0.c
+printf_d.c
+printf_f.c
+printf_o.c
+printf_s.c
+printf_u.c
+printf_x.c
+speedtest_ft_printf.c
+speedtest_printf.c
+
+/Users/allauren/42c/tmp:
 
 /Users/allauren/Applications:
 Anaconda-Navigator.app
@@ -1557,6 +2416,7 @@ Screen Shot 2018-03-28 at 5.43.55 PM.png
 Screen Shot 2018-03-29 at 1.53.47 PM.png
 Screen Shot 2018-03-31 at 8.25.36 PM.png
 Screen Shot 2018-03-31 at 8.47.41 PM.png
+Screen Shot 2018-04-01 at 1.02.17 PM.png
 Screen Shot 2018-04-01 at 1.10.29 AM.png
 Screen Shot 2018-04-01 at 1.11.28 AM.png
 Screen Shot 2018-04-01 at 1.15.24 AM.png
@@ -1569,6 +2429,7 @@ Screen Shot 2018-04-01 at 1.38.38 AM.png
 Screen Shot 2018-04-01 at 11.24.36 AM.png
 Screen Shot 2018-04-01 at 12.00.39 AM.png
 Screen Shot 2018-04-01 at 12.00.42 AM.png
+Screen Shot 2018-04-01 at 2.05.32 PM.png
 Screen Shot 2018-04-01 at 7.53.16 AM.png
 Screen Shot 2018-04-01 at 8.08.48 AM.png
 Screen Shot 2018-04-01 at 8.19.23 AM.png
@@ -2895,6 +3756,7 @@ turtle.s
 zork.s
 
 /Users/allauren/LEM_IN:
+Lem-in-Checker
 Makefile
 TEST
 a.out
@@ -2911,6 +3773,77 @@ srcs
 test.c
 test12
 test2
+testl
+
+/Users/allauren/LEM_IN/Lem-in-Checker:
+1.map
+10.map
+100K.map
+10K.map
+10_lots_of_comments.map
+2.map
+20.map
+5.map
+9_path_depth_10_ants.map
+9_path_depth_1_ants.map
+9_path_depth_2_ants.map
+9_path_depth_4_ants.map
+9_path_depth_8_ants.map
+9_path_depth_9_ants.map
+Bfs_one_path
+README.md
+err_3_coordinates.map
+err_duplicate.map
+err_empty.map
+err_letter_in_coordinate.map
+err_link_to_unknown_room.map
+err_no_ants.map
+err_no_ants2.map
+err_no_ants3.map
+err_no_end.map
+err_no_end2.map
+err_no_links.map
+err_no_path.map
+err_no_rooms.map
+err_no_start.map
+err_no_start2.map
+err_start_end_same.map
+err_too_few_ants.map
+err_too_many_ants.map
+run.sh
+
+/Users/allauren/LEM_IN/Lem-in-Checker/Bfs_one_path:
+-Nothing
+-dev-null
+-dev-urandom
+-dev-zero
+1.map
+10_lots_of_comments.map
+2.map
+20.map
+5.map
+9_path_depth_10_ants.map
+9_path_depth_2_ants.map
+9_path_depth_4_ants.map
+9_path_depth_8_ants.map
+9_path_depth_9_ants.map
+err_3_coordinates.map
+err_duplicate.map
+err_empty.map
+err_letter_in_coordinate.map
+err_link_to_unknown_room.map
+err_no_ants.map
+err_no_ants2.map
+err_no_ants3.map
+err_no_end.map
+err_no_end2.map
+err_no_links.map
+err_no_rooms.map
+err_no_start.map
+err_no_start2.map
+err_start_end_same.map
+err_too_few_ants.map
+err_too_many_ants.map
 
 /Users/allauren/LEM_IN/depend:
 alexit.d
@@ -3926,6 +4859,7 @@ Intervals_8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 Intervals_900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 Intervals_9009969F-EE7D-5D11-993B-4B900C03262F.plist
 Intervals_9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+Intervals_B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 Intervals_BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 Intervals_C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 Intervals_D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -3944,6 +4878,7 @@ a.out_47EC8664-E76F-5357-9018-061E4224A8F4.plist
 a.out_69E0A761-6F13-5207-9CA6-D60F709B58C9.plist
 a.out_6C1385F5-0235-553A-8375-A911F803B17B.plist
 a.out_852B95B7-6804-5F79-935D-FF2B6913467E.plist
+a.out_B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 a.out_BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 a.out_F91DBF41-EEF7-59A1-9EA4-6099BFFD2D17.plist
 asm_392B255F-6CC3-5096-B13D-703BB7F5E211.plist
@@ -3973,6 +4908,7 @@ cloudd_8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 cloudd_900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 cloudd_9009969F-EE7D-5D11-993B-4B900C03262F.plist
 cloudd_9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+cloudd_B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 cloudd_BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 cloudd_C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 cloudd_D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -3986,12 +4922,14 @@ corewar_69E0A761-6F13-5207-9CA6-D60F709B58C9.plist
 corewar_BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 corewar_D6B03420-9341-5971-A520-25DDD21A82E6.plist
 corewar_FDF16E14-7864-55DF-8273-0B7E5EC31D38.plist
+ft_ls_B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 iTerm2_69E0A761-6F13-5207-9CA6-D60F709B58C9.plist
 iTerm2_BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 lol_392B255F-6CC3-5096-B13D-703BB7F5E211.plist
 memcheck-amd64-darwin_02F49C51-A3AB-5645-B2A1-49647220B989.plist
 memcheck-amd64-darwin_392B255F-6CC3-5096-B13D-703BB7F5E211.plist
 memcheck-amd64-darwin_852B95B7-6804-5F79-935D-FF2B6913467E.plist
+memcheck-amd64-darwin_B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 memcheck-amd64-darwin_BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 push_swap_2DF3EBA7-07E0-5629-91CF-546E8C77ECE4.plist
 suggestd_017B6B80-3BE2-5365-816A-56F7E545FA77.plist
@@ -4018,6 +4956,7 @@ suggestd_8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 suggestd_900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 suggestd_9009969F-EE7D-5D11-993B-4B900C03262F.plist
 suggestd_9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+suggestd_B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 suggestd_BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 suggestd_C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 suggestd_D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -4475,6 +5414,7 @@ Chrome
 RLZ
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome:
+App Shim Socket
 BrowserMetrics
 BrowserMetrics-spare.pma
 CertificateRevocation
@@ -4482,6 +5422,7 @@ CertificateTransparency
 Consent To Send Stats
 Crashpad
 CrashpadMetrics-active.pma
+CrashpadMetrics.pma
 Default
 FileTypePolicies
 First Run
@@ -4489,6 +5430,7 @@ Local State
 NativeMessagingHosts
 OriginTrials
 PepperFlash
+RunningChromeVersion
 SSLErrorAssistant
 Safe Browsing
 Safe Browsing Channel IDs
@@ -4496,36 +5438,19 @@ Safe Browsing Channel IDs-journal
 Safe Browsing Cookies
 Safe Browsing Cookies-journal
 ShaderCache
+SingletonCookie
+SingletonLock
+SingletonSocket
 Subresource Filter
 Webstore Downloads
 WidevineCdm
-chrome_shutdown_ms.txt
 pnacl
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/BrowserMetrics:
+BrowserMetrics-5AC0236F-AEE8.pma
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateRevocation:
-4370
-4372
 4373
-
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateRevocation/4370:
-_metadata
-crl-set
-manifest.fingerprint
-manifest.json
-
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateRevocation/4370/_metadata:
-verified_contents.json
-
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateRevocation/4372:
-_metadata
-crl-set
-manifest.fingerprint
-manifest.json
-
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateRevocation/4372/_metadata:
-verified_contents.json
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateRevocation/4373:
 _metadata
@@ -4537,52 +5462,7 @@ manifest.json
 verified_contents.json
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateTransparency:
-706
 707
-
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateTransparency/706:
-_metadata
-_platform_specific
-manifest.fingerprint
-manifest.json
-
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateTransparency/706/_metadata:
-verified_contents.json
-
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateTransparency/706/_platform_specific:
-all
-
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateTransparency/706/_platform_specific/all:
-sths
-
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateTransparency/706/_platform_specific/all/sths:
-03019df3fd85a69a8ebd1facc6da9ba73e469774fe77f579fc5a08b8328c1d6b.sth
-15970488d7b997a05beb52512adee8d2e8b4a3165264121a9fabfbd5f85ad93f.sth
-293c519654c83965baaa50fc5807d4b76fbf587a2972dca4c30cf4e54547f478.sth
-34bb6ad6c3df9c03eea8a499ff7891486c9d5e5cac92d01f7bfd1bce19db48ef.sth
-41b2dc2e89e63ce4af1ba7bb29bf68c6dee6f9f1cc047e30dffae3b3ba259263.sth
-4494652eb0eeceafc44007d8a8fe28c0dae682bed8cb31b53fd33396b5b681a8.sth
-5581d4c2169036014aea0b9b573c53f0c0e43878702508172fa3aa1d0713d30c.sth
-5614069a2fd7c2ecd3f5e1bd44b23ec74676b9bc99115cc0ef949855d689d0dd.sth
-5ea773f9df56c0e7b536487dd049e0327a919a0c84a112128418759681714558.sth
-63f2dbcde83bcc2ccf0b728427576b33a48d61778fbd75a638b1c768544bd88d.sth
-68f698f81f6482be3a8ceeb9281d4cfc71515d6793d444d10a67acbb4f4ffbc4.sth
-6f5376ac31f03119d89900a45115ff77151c11d902c10029068db2089a37d913.sth
-7461b4a09cfb3d41d75159575b2e7649a445a8d27709b0cc564a6482b7eb41a3.sth
-747eda8331ad331091219cce254f4270c2bffd5e422008c6373579e6107bcc56.sth
-8775bfe7597cf88c43995fbdf36eff568d475636ff4ab560c1b4eaff5ea0830f.sth
-a4501269055a15545e6211ab37bc103f62ae5576a45e4b1714453e1b22106a25.sth
-a4b90990b418581487bb13a2cc67700a3c359804f91bdfb8e377cd0ec80ddc10.sth
-a577ac9ced7548dd8f025b67a241089df86e0f476ec203c2ecbedb185f282638.sth
-ac3b9aed7fa9674757159e6d7d575672f9d98100941e9bdeffeca1313b75782d.sth
-b21e05cc8ba2cd8a204e8766f92bb98a2520676bdafa70e7b249532def8b905e.sth
-bbd9dfbc1f8a71b593942397aa927b473857950aab52e81a909664368e1ed185.sth
-bc78e1dfc5f63c684649334da10fa15f0979692009c081b4f3f6917f3ed9b8a5.sth
-cdb5179b7fc1c046feea31136a3f8f002e6182faf8896fecc8b2f5b5ab604900.sth
-db74afeecb29ecb1feca3e716d2ce5b9aabb36f7847183c75d9d4f37b61fbf64.sth
-ddeb1d2b7a0d4fa6208b81ad8168707e2e8e9d01d55c888d3d11c4cdb6ecbecc.sth
-ee4bbdb775ce60bae142691fabe19e66a30f7e5fb072d88300c47b897aa8fdcb.sth
-f65c942fd1773022145418083094568ee34d131933bfdf0c2f200bcc4ef164e3.sth
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/CertificateTransparency/707:
 _metadata
@@ -5109,9 +5989,9 @@ twitter.png
 weibo.png
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm:
-6417.1211.0.0_1
+6417.1211.0.0_0
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0:
 _locales
 _metadata
 angular.js
@@ -5133,7 +6013,7 @@ mirroring_common.js
 mirroring_hangouts.js
 mirroring_webrtc.js
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales:
 am
 ar
 bg
@@ -5185,161 +6065,161 @@ vi
 zh
 zh_TW
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/am:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/am:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/ar:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/ar:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/bg:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/bg:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/bn:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/bn:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/ca:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/ca:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/cs:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/cs:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/da:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/da:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/de:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/de:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/el:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/el:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/en:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/en:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/es:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/es:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/et:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/et:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/fa:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/fa:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/fi:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/fi:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/fil:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/fil:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/fr:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/fr:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/gu:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/gu:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/hi:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/hi:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/hr:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/hr:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/hu:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/hu:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/id:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/id:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/it:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/it:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/iw:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/iw:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/ja:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/ja:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/kn:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/kn:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/ko:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/ko:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/lt:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/lt:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/lv:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/lv:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/ml:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/ml:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/mr:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/mr:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/ms:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/ms:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/nb:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/nb:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/nl:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/nl:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/pl:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/pl:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/pt:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/pt:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/ro:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/ro:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/ru:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/ru:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/sk:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/sk:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/sl:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/sl:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/sr:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/sr:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/sv:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/sv:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/sw:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/sw:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/ta:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/ta:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/te:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/te:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/th:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/th:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/tr:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/tr:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/uk:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/uk:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/vi:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/vi:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/zh:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/zh:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_locales/zh_TW:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_locales/zh_TW:
 messages.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/_metadata:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/_metadata:
 computed_hashes.json
 verified_contents.json
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/cast_setup:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/cast_setup:
 cast_app.js
 cast_app_min.css
 cast_app_redirect.js
@@ -5349,7 +6229,7 @@ index.html
 offers.html
 setup.html
 
-/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_1/cloud_route_details:
+/Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Extensions/pkedcjkdefgpdelpbcmbmeomcjbeemfm/6417.1211.0.0_0/cloud_route_details:
 view.html
 view.js
 
@@ -6638,12 +7518,9 @@ ghbmnnjooekpmoecnnnilnnbdlolhkhi
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Local Extension Settings/cfhdojbkjhnklbpkdaibdccddilifddb:
 000005.ldb
-000992.ldb
-000993.ldb
-000995.ldb
-000997.ldb
-000998.log
-000999.ldb
+001071.log
+001073.ldb
+001074.ldb
 CURRENT
 LOCK
 LOG
@@ -6662,12 +7539,13 @@ leveldb
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Local Storage/leveldb:
 000005.ldb
-000794.ldb
-000795.ldb
-000796.ldb
-000798.ldb
-000799.log
-000800.ldb
+000806.ldb
+000807.ldb
+000808.ldb
+000810.ldb
+000812.ldb
+000813.log
+000814.ldb
 CURRENT
 LOCK
 LOG
@@ -6928,8 +7806,8 @@ LOG.old
 MANIFEST-000001
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Service Worker/ScriptCache:
-10976bb7647aaac5_0
-10976bb7647aaac5_1
+0bdbbbe94f0d8f33_0
+0bdbbbe94f0d8f33_1
 14f42a33486e795e_0
 14f42a33486e795e_1
 2b52e28fc13dd944_0
@@ -6947,15 +7825,13 @@ MANIFEST-000001
 3dbbd55fa7f81662_1
 466b5b3b52e6f932_0
 466b5b3b52e6f932_1
+46f78f1a3d7d80d5_0
+46f78f1a3d7d80d5_1
 4b9e1fd4e0f0b945_0
 4b9e1fd4e0f0b945_1
 4ffe49d56cbde10e_0
-56dfa33f6b259099_0
-56dfa33f6b259099_1
 5bea0cdf042c3d65_0
 5bea0cdf042c3d65_1
-6741585dfb58ea36_0
-6741585dfb58ea36_1
 7592d72067f5cf63_0
 7592d72067f5cf63_1
 834dbf2be1251a83_0
@@ -6988,10 +7864,13 @@ bb8535673e61c013_0
 bb8535673e61c013_1
 cd3086166a2e42a1_0
 cd3086166a2e42a1_1
+ce7e0227ad5bbe5a_0
 d48d327deb48075f_0
 d48d327deb48075f_1
 d7abbd5b4e5843b6_0
 d7abbd5b4e5843b6_1
+e50cda445bc1d258_0
+e50cda445bc1d258_1
 e54123295ea0fb4f_0
 e54123295ea0fb4f_1
 e6f2c1601983ad0f_0
@@ -7000,6 +7879,8 @@ e78223c92f1adf1b_0
 ed5ecd55074b69ae_0
 edb1d411371a173f_0
 edb1d411371a173f_1
+f42a839bac739427_0
+f42a839bac739427_1
 index
 index-dir
 
@@ -7007,9 +7888,9 @@ index-dir
 the-real-index
 
 /Users/allauren/Library/Application Support.42_cache_bak/Google/Chrome/Default/Session Storage:
-000831.ldb
-000851.log
-000853.ldb
+000864.log
+000865.ldb
+000866.ldb
 CURRENT
 LOCK
 LOG
@@ -7454,6 +8335,9 @@ Cookies-journal
 GPUCache
 Local Storage
 Preferences
+SS
+SingletonCookie
+SingletonLock
 dictionaries
 installation
 local-settings.json
@@ -7498,6 +8382,126 @@ f_00001d
 f_00001e
 f_00001f
 f_000020
+f_000021
+f_000022
+f_000023
+f_000024
+f_000025
+f_000026
+f_000027
+f_000028
+f_000029
+f_00002a
+f_00002b
+f_00002c
+f_00002d
+f_00002e
+f_00002f
+f_000030
+f_000031
+f_000032
+f_000033
+f_000034
+f_000035
+f_000036
+f_000037
+f_000038
+f_000039
+f_00003a
+f_00003b
+f_00003c
+f_00003d
+f_00003e
+f_00003f
+f_000040
+f_000041
+f_000042
+f_000043
+f_000044
+f_000045
+f_000046
+f_000047
+f_000048
+f_000049
+f_00004a
+f_00004b
+f_00004c
+f_00004d
+f_00004e
+f_00004f
+f_000050
+f_000051
+f_000052
+f_000053
+f_000054
+f_000055
+f_000056
+f_000057
+f_000058
+f_000059
+f_00005a
+f_00005b
+f_00005c
+f_00005d
+f_00005e
+f_00005f
+f_000060
+f_000061
+f_000062
+f_000063
+f_000064
+f_000065
+f_000066
+f_000067
+f_000068
+f_000069
+f_00006a
+f_00006b
+f_00006c
+f_00006d
+f_00006e
+f_00006f
+f_000070
+f_000071
+f_000072
+f_000073
+f_000074
+f_000075
+f_000076
+f_000077
+f_000078
+f_000079
+f_00007a
+f_00007b
+f_00007c
+f_00007d
+f_00007e
+f_00007f
+f_000080
+f_000081
+f_000082
+f_000083
+f_000084
+f_000085
+f_000086
+f_000087
+f_000088
+f_000089
+f_00008a
+f_00008b
+f_00008c
+f_00008d
+f_00008e
+f_00008f
+f_000090
+f_000091
+f_000092
+f_000093
+f_000094
+f_000095
+f_000096
+f_000097
+f_000098
 index
 
 /Users/allauren/Library/Application Support.42_cache_bak/Slack/GPUCache:
@@ -7551,6 +8555,9 @@ renderer-33929.log
 renderer-43586.log
 renderer-43590.log
 renderer-43594.log
+renderer-45501.log
+renderer-45505.log
+renderer-45506.log
 renderer-47909.log
 renderer-47913.log
 renderer-47914.log
@@ -7889,7 +8896,6 @@ version.txt
 
 /Users/allauren/Library/Application Support.42_cache_bak/iTerm2:
 DynamicProfiles
-log.0.txt
 
 /Users/allauren/Library/Application Support.42_cache_bak/iTerm2/DynamicProfiles:
 
@@ -20767,13 +21773,14 @@ com.apple.Preview.savedState
 /Users/allauren/Library/Containers/com.apple.Preview/Data/Library/Saved Application State/com.apple.Preview.savedState:
 data.data
 window_1.data
-window_13.data
 window_2.data
 window_3.data
 window_4.data
 window_5.data
 window_6.data
 window_7.data
+window_8.data
+window_9.data
 windows.plist
 
 /Users/allauren/Library/Containers/com.apple.QuickTimePlayerX:
@@ -21825,9 +22832,10 @@ com.apple.TextEdit.savedState
 /Users/allauren/Library/Containers/com.apple.TextEdit/Data/Library/Saved Application State/com.apple.TextEdit.savedState:
 data.data
 window_1.data
+window_10.data
 window_2.data
-window_3.data
-window_5.data
+window_4.data
+window_6.data
 window_7.data
 window_8.data
 window_9.data
@@ -24584,6 +25592,7 @@ com.apple.TextEdit.8ACD04AD-74B5-56C5-A022-CDA860DAE10C.plist
 com.apple.TextEdit.8EA580E5-7593-5A42-B494-1088A9E113D1.plist
 com.apple.TextEdit.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.TextEdit.9B4D3539-9E96-53E4-B3D4-016A359CA87B.plist
+com.apple.TextEdit.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.TextEdit.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.TextEdit.C243EA32-CA04-5DC9-9191-3E1BB6D1D43A.plist
 com.apple.TextEdit.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
@@ -26507,6 +27516,12 @@ tr-dynamic.lm
 
 /Users/allauren/Library/LanguageModeling/da-dynamic.lm:
 Info.plist
+dynamic.dat
+dynamicids.dat
+lexicon.dat
+meta.dat
+probation.dat
+tags.dat
 
 /Users/allauren/Library/LanguageModeling/de-dynamic.lm:
 Info.plist
@@ -26933,6 +27948,7 @@ com.apple.iChat.AIM.plist.osd8exp
 com.apple.iChat.Jabber.plist
 com.apple.iChat.Jabber.plist.1vx2Veo
 com.apple.iChat.Jabber.plist.8eUz9Ev
+com.apple.iChat.Jabber.plist.E9tygc5
 com.apple.iChat.Jabber.plist.O85HKwB
 com.apple.iChat.Jabber.plist.RiELHBz
 com.apple.iChat.Jabber.plist.YUtsltA
@@ -27162,6 +28178,7 @@ com.apple.Bluetooth.8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 com.apple.Bluetooth.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.Bluetooth.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.Bluetooth.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.Bluetooth.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.Bluetooth.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.Bluetooth.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.Bluetooth.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27196,6 +28213,7 @@ com.apple.QuickLookDaemon.8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 com.apple.QuickLookDaemon.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.QuickLookDaemon.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.QuickLookDaemon.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.QuickLookDaemon.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.QuickLookDaemon.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.QuickLookDaemon.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.QuickLookDaemon.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27253,6 +28271,8 @@ com.apple.commcenter.csidata.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.commcenter.csidata.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.commcenter.csidata.9009969F-EE7D-5D11-993B-4B900C03262F.plist.2jGlB7s
 com.apple.commcenter.csidata.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.commcenter.csidata.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
+com.apple.commcenter.csidata.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist.yx3uLVP
 com.apple.commcenter.csidata.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.commcenter.csidata.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.commcenter.csidata.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27296,6 +28316,7 @@ com.apple.coreservices.appleidauthenticationinfo.8F788E4A-8730-5700-9C65-4AA1D11
 com.apple.coreservices.appleidauthenticationinfo.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.coreservices.appleidauthenticationinfo.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.coreservices.appleidauthenticationinfo.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.coreservices.appleidauthenticationinfo.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.coreservices.appleidauthenticationinfo.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.coreservices.appleidauthenticationinfo.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.coreservices.appleidauthenticationinfo.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27330,6 +28351,7 @@ com.apple.dock.8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 com.apple.dock.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.dock.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.dock.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.dock.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.dock.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.dock.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.dock.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27382,6 +28404,7 @@ com.apple.iChat.AIM.8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 com.apple.iChat.AIM.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.iChat.AIM.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.iChat.AIM.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.iChat.AIM.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.iChat.AIM.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.iChat.AIM.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.iChat.AIM.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27426,6 +28449,7 @@ com.apple.iChat.Jabber.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.iChat.Jabber.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.iChat.Jabber.9009969F-EE7D-5D11-993B-4B900C03262F.plist.F2bK6s5
 com.apple.iChat.Jabber.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.iChat.Jabber.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.iChat.Jabber.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.iChat.Jabber.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.iChat.Jabber.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27470,6 +28494,7 @@ com.apple.iChat.SubNet.8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 com.apple.iChat.SubNet.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.iChat.SubNet.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.iChat.SubNet.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.iChat.SubNet.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.iChat.SubNet.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.iChat.SubNet.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.iChat.SubNet.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27505,6 +28530,7 @@ com.apple.identityservices.idstatuscache.8F788E4A-8730-5700-9C65-4AA1D11B4BBC.pl
 com.apple.identityservices.idstatuscache.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.identityservices.idstatuscache.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.identityservices.idstatuscache.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.identityservices.idstatuscache.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.identityservices.idstatuscache.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.identityservices.idstatuscache.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.identityservices.idstatuscache.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27551,6 +28577,7 @@ com.apple.imservice.SMS.8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 com.apple.imservice.SMS.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.imservice.SMS.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.imservice.SMS.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.imservice.SMS.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.imservice.SMS.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.imservice.SMS.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.imservice.SMS.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27595,6 +28622,7 @@ com.apple.imservice.ids.FaceTime.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.imservice.ids.FaceTime.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.imservice.ids.FaceTime.9009969F-EE7D-5D11-993B-4B900C03262F.plist.kcpZCE9
 com.apple.imservice.ids.FaceTime.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.imservice.ids.FaceTime.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.imservice.ids.FaceTime.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.imservice.ids.FaceTime.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.imservice.ids.FaceTime.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27641,6 +28669,8 @@ com.apple.imservice.ids.iMessage.8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 com.apple.imservice.ids.iMessage.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.imservice.ids.iMessage.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.imservice.ids.iMessage.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.imservice.ids.iMessage.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
+com.apple.imservice.ids.iMessage.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist.q33BMym
 com.apple.imservice.ids.iMessage.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.imservice.ids.iMessage.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.imservice.ids.iMessage.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27676,6 +28706,7 @@ com.apple.loginwindow.8F788E4A-8730-5700-9C65-4AA1D11B4BBC.plist
 com.apple.loginwindow.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.loginwindow.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.loginwindow.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.loginwindow.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.loginwindow.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.loginwindow.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.loginwindow.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27708,6 +28739,7 @@ com.apple.notificationcenterui.8ACD04AD-74B5-56C5-A022-CDA860DAE10C.plist
 com.apple.notificationcenterui.900712C1-A151-53A2-A66E-BC93DA94AB5D.plist
 com.apple.notificationcenterui.9009969F-EE7D-5D11-993B-4B900C03262F.plist
 com.apple.notificationcenterui.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.notificationcenterui.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.notificationcenterui.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.notificationcenterui.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.notificationcenterui.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -27741,6 +28773,7 @@ com.apple.systempreferences.7829E94E-29CC-5560-88A6-0346BDD484F9.plist
 com.apple.systempreferences.803D1B6C-ED2D-5EFC-B3C6-B96E59E08EA7.plist
 com.apple.systempreferences.852B95B7-6804-5F79-935D-FF2B6913467E.plist
 com.apple.systempreferences.9A8B2083-95D8-5FF3-8348-55C08BFCB186.plist
+com.apple.systempreferences.B2327E0C-F902-5934-B8D9-284A4E4DF9BB.plist
 com.apple.systempreferences.BBF9609F-1BE0-56A0-B935-8F14F7595AE3.plist
 com.apple.systempreferences.C48D05D5-33A6-53A2-AE40-19C3CC459F38.plist
 com.apple.systempreferences.D6B03420-9341-5971-A520-25DDD21A82E6.plist
@@ -29129,7 +30162,7 @@ windows.plist
 
 /Users/allauren/Library/Saved Application State.42_cache_bak/com.apple.finder.savedState:
 data.data
-window_2.data
+window_1.data
 windows.plist
 
 /Users/allauren/Library/Saved Application State.42_cache_bak/com.apple.systempreferences.savedState:
@@ -29139,7 +30172,7 @@ windows.plist
 
 /Users/allauren/Library/Saved Application State.42_cache_bak/com.google.Chrome.savedState:
 data.data
-window_1.data
+window_3.data
 windows.plist
 
 /Users/allauren/Library/Saved Application State.42_cache_bak/com.googlecode.iterm2.savedState:
@@ -29150,6 +30183,8 @@ windows.plist
 
 /Users/allauren/Library/Saved Application State.42_cache_bak/com.googlecode.munki.ManagedSoftwareCenter.savedState:
 data.data
+window_1.data
+window_2.data
 windows.plist
 
 /Users/allauren/Library/Saved Application State.42_cache_bak/com.sublimetext.3.savedState:
@@ -29159,7 +30194,7 @@ windows.plist
 
 /Users/allauren/Library/Saved Application State.42_cache_bak/com.tinyspeck.slackmacgap.savedState:
 data.data
-window_2.data
+window_1.data
 windows.plist
 
 /Users/allauren/Library/Saved Application State.42_cache_bak/org.videolan.vlc.savedState:
@@ -29405,10 +30440,14 @@ tasks.plist
 
 /Users/allauren/Library/com.apple.nsurlsessiond/5C191B41B85964975463638FAD57F73CB1F3418D/6EB8557D128019BE18C5E033539027206163D3DC/Uploads:
 CFNetworkUpload_0F791863-D3E6-4E51-BDBD-6A55C53102B4
+CFNetworkUpload_16023411-761F-4AF9-B7D4-652F8B0A2469
 CFNetworkUpload_1E0F3A4F-4246-430F-9170-EDC0DA562B76
 CFNetworkUpload_2D1792A7-22DB-4F0E-BF03-C714E4A4E939
 CFNetworkUpload_311412C7-D2BD-4F6D-AF7A-AE6C6D757323
+CFNetworkUpload_36326E06-B131-42B8-8DB8-2B2134B9E6B2
+CFNetworkUpload_4AFB1DC4-CF7A-445D-AB2D-C6B56C79E2BC
 CFNetworkUpload_5448A054-61BD-46F2-AE6E-F11F068CE383
+CFNetworkUpload_54FBD9E2-1348-4F8E-8EDA-F15CB739EEA3
 CFNetworkUpload_5BAF857A-CB12-497A-863E-CA74A8580EB1
 CFNetworkUpload_6BAD376C-8A4D-4C9C-8C4E-91834F6E64C7
 CFNetworkUpload_6C895F44-07F7-431F-AB24-B6896AB62664
@@ -29420,9 +30459,11 @@ CFNetworkUpload_8782ECF0-06F4-49A9-A3BF-02A5669ACD11
 CFNetworkUpload_8B07646E-E453-45A7-8433-0009A3889D71
 CFNetworkUpload_90EB2B9D-F1E0-40BE-875D-2EFA766C51B4
 CFNetworkUpload_923B3821-4D40-46B8-B92C-9AF8606A4EC8
+CFNetworkUpload_957FA94C-9C67-49DD-B247-4E7A1C251539
 CFNetworkUpload_963CEC4A-4ED6-43F0-8023-2BF22D8EBED6
 CFNetworkUpload_A04514DC-2F7E-4451-BC7F-C4130C66F51C
 CFNetworkUpload_A293A731-2498-4FE4-BE14-1CE900ED78BC
+CFNetworkUpload_B23B858D-570C-407B-8925-A26A6A616388
 CFNetworkUpload_B2FEAC27-9D45-4568-BC83-25DB86BA4410
 CFNetworkUpload_BAD644B7-10BF-498E-BD1A-EEDA6AA6B601
 CFNetworkUpload_BC5AF512-9FD9-4893-A1BC-33B5C97A1C07
@@ -32381,10 +33422,12 @@ diff2
 diff21
 diff22
 droit
-droit2
+ft_ls
+ft_ls.dSYM
 includes
 l
 lol
+lol.c
 lol.dSYM
 lol2
 lol234
@@ -32589,11 +33632,18 @@ a.out
 
 /Users/allauren/ls/droit:
 
-/Users/allauren/ls/droit2:
-test123
+/Users/allauren/ls/ft_ls.dSYM:
+Contents
 
-/Users/allauren/ls/droit2/test123:
-ft_ls: test123: Permission denied
+/Users/allauren/ls/ft_ls.dSYM/Contents:
+Info.plist
+Resources
+
+/Users/allauren/ls/ft_ls.dSYM/Contents/Resources:
+DWARF
+
+/Users/allauren/ls/ft_ls.dSYM/Contents/Resources/DWARF:
+ft_ls
 
 /Users/allauren/ls/includes:
 ft_ls.h
@@ -32621,6 +33671,7 @@ error.c
 l_utils.c
 main.c
 parse_args.c
+print_lfunctions.c
 print_lsfunctions.c
 print_lst.c
 sort_list.c
@@ -32669,7 +33720,6 @@ print_options.c
 printer.c
 sorting_func.c
 test
-test123
 utils.c
 
 /Users/allauren/lstle/-lrs:
@@ -32800,9 +33850,6 @@ get_next_line.c
 libft.a
 libft.h
 libft.h.gch
-
-/Users/allauren/lstle/test123:
-ft_ls: test123: Permission denied
 
 /Users/allauren/monthy:
 README.md

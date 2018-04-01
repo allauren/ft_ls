@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 08:04:12 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 13:11:39 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 19:29:28 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,9 @@ typedef struct	s_env
 
 typedef struct	s_data
 {
-//	char		*str;
-	char		*name;
 	int			folder;
 	char		*path;
+	int			name;
 	struct stat buf;
 	DIR			*dir;
 	int			error;
@@ -74,6 +73,7 @@ void		get_all_folder(t_list **lst, t_env *env);
  ** Dir functions
  */
 
+void		*concatpathd(t_data *data, char *str, char *name);
 int		displaydir(char *str, t_env *env);
 int		ft_is_current_folder(char *str, t_env *env);
 char		*getfolder_open(char *str, t_data *data);
@@ -90,6 +90,7 @@ void		print_all(t_data *val, t_env *env);
 void		print_dir(t_env *env, t_data *data, int i);
 void		print_link(t_data *data);
 void		print_size(t_data *data, char c);
+void		print_right(t_data *val);
 /*
  * * Del functions
  */
