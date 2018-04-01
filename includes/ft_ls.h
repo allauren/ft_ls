@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 08:04:12 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 21:29:27 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 23:52:32 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ typedef struct	s_env
 	int			current;
 	int			pass;
 	char		*tmp;
+	long int	(*fct)(void *,void *);
 	t_options	o;
 	t_list		*lst;
 	t_list		*lst2;
@@ -85,7 +86,7 @@ void		ft_print_folder(char *str, t_env *env);
 t_list *newlstdata(t_data *data);
 void	ft_wrong_folder(char *str);
 void	ft_usage(char *str);
-void		print_wfolder(t_list **lst);
+void	print_wfolder(t_list **list,t_env *env);
 void		print_ofolder(t_list **lst, t_env *env);
 void		print_all(t_data *val, t_env *env);
 void		print_dir(t_env *env, t_data *data, int i);
@@ -97,7 +98,7 @@ void		print_right(t_data *val);
  */
 void		deldata(t_data *data);
 t_list		*ft_deldate(t_list *prev, t_list *lst, t_list **start);
-void	elemdel(t_list **lst);
+void		elemdel(t_list **lst);
 char		*concatpath(char *str, char *name);
 /*
  * * sort functions
@@ -105,6 +106,8 @@ char		*concatpath(char *str, char *name);
 
 long int		ft_sortalpha(void *content1, void *content2);
 long int		ft_sortralpha(void *content1, void *content2);
+long int		ft_sorttime(void *cont1, void *cont2);
+long int		ft_sortrtime(void *cont1, void *cont2);
 
 /*
  * * l functions

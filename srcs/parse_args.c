@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 10:03:21 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 22:38:16 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 23:55:44 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,8 @@ void		isvalidfolder(char *str, t_env *env)
 						ft_wrong_folder(d->path + d->name);
 				}
 		}
-					ft_strdel(&path);
-			ft_lstadd(&env->lst, newlstdata(d));
+	ft_strdel(&path);
+	ft_lstadd(&env->lst, newlstdata(d));
 }
 
 void		handlefirst(int ac, char **av, t_env *env)
@@ -93,17 +93,21 @@ void		handlefirst(int ac, char **av, t_env *env)
 		env->i++;
 	}
 	env->pass = env->pass > 1;
-	ft_lst_merge_sort((&env->lst), &ft_sortalpha);
-	print_wfolder(&env->lst);
+	ft_lst_merge_sort((&env->lst), env->fct);
+	print_wfolder(&env->lst, env);
 	print_ofolder(&env->lst, env);
 }
 
 void	ft_parse_args(int ac, char **av, t_env *env)
 {
+	static long int (*tab[4])(void *, void*) = {ft_sortalpha, ft_sortralpha,
+						ft_sorttime, ft_sortrtime};
+
 	while (++env->i < ac && av[env->i][0] == '-')
 		if (!ft_set_arg(av[env->i], env))
 			break;
 	env->current = (env->i == ac);
+	env->fct = tab[OPT.t ? 2 + OPT.r : OPT.r];
 	handlefirst(ac, av, env);
 	env->current = 0;
 	get_all_folder(&env->lst, env);

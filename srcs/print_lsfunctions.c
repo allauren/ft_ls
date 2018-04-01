@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/31 17:01:42 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 23:32:46 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 23:53:34 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void		print_dir(t_env *env, t_data *data, int i)
 	}
 }
 
-void		print_wfolder(t_list **lst)
+void		print_wfolder(t_list **lst, t_env *env)
 {
 	t_data	*val;
 	t_list	*t;

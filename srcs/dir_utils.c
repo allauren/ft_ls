@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 11:31:58 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 22:53:31 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 23:52:48 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void		get_all_folder(t_list **lst, t_env *env)
 					filldata(&data, env, c);
 					ft_lstadd(&print, newlstdata(data));
 				}
-			ft_lst_merge_sort(&print, &ft_sortalpha);
+			ft_lst_merge_sort(&print, env->fct);
 			print_dir(env, c, !!print);
 			recucall(print, &tmp, env, c);
 			get_all_folder(&tmp,env);
