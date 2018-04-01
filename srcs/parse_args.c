@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 10:03:21 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 11:10:24 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 13:59:14 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,8 @@ void		isvalidfolder(char *str, t_env *env)
 				if (ft_strequ(odir->d_name, d->name))
 				{
 					d->error = 1;
-					path = concatpath(d->path, d->name);
+					ft_strdel(&d->path);
+					d->path = concatpath(d->path, d->name);
 					if(lstat(path, &d->buf) == -1 && ft_printf("coucou") &&  d->error++)
 						ft_wrong_folder(d->name);
 					ft_strdel(&path);

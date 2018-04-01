@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/31 17:01:42 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 13:11:58 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 14:24:38 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,15 @@ void		print_all(t_data *val, t_env *env)
 		select_type(val->buf.st_mode, &c);
 		ft_printf("%c", c);
 		print_mode(val->buf.st_mode);
-		ft_printf("%3d", val->buf.st_nlink);
-		ft_printf("%10s ", getpwuid(val->buf.st_uid)->pw_name);
-		ft_printf("%10s ", getgrgid(val->buf.st_gid)->gr_name);
+		ft_printf("%3d ", val->buf.st_nlink);
+		if(getpwuid(val->buf.st_uid))
+			ft_printf("%10s ", getpwuid(val->buf.st_uid)->pw_name);
+		else
+			ft_printf("%10d ", val->buf.st_gid);
+		if(getgrgid(val->buf.st_gid))
+			ft_printf("%10s ",getgrgid(val->buf.st_gid)->gr_name);
+		else
+			ft_printf("%10d ", val->buf.st_gid);
 		print_size(val, c);
 		tmp[ft_strlen(tmp) - 9] = '\0';
 		ft_printf("%10s ", &tmp[4]);

@@ -6,7 +6,7 @@
 #    By: gsmith <gsmith@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 16:39:52 by gsmith            #+#    #+#              #
-#    Updated: 2018/03/21 08:27:09 by allauren         ###   ########.fr        #
+#    Updated: 2018/04/01 13:30:37 by allauren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ OBJS_PATH = objs
 SRCS_PATH = srcs
 DPDS_PATH = depend
 SRCS = $(addprefix $(SRCS_PATH)/, \
-	   main.c)
+	   main.c)\
 
 OBJS = $(SRCS:$(SRCS_PATH)/%.c=$(OBJS_PATH)/%.o)
 DPDS = $(SRCS:$(SRCS_PATH)/%.c=$(DPDS_PATH)/%.d)
@@ -36,13 +36,14 @@ YELLOW = '\033[1;33m'
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): # $(OBJS)
 #	@printf $(NC)"[$(NAME)] "$(YELLOW)"Compiling .o files done.\n"$(NC)
 	make -C $(LIBFT_DIR)
 	#@printf $(NC)"[$(NAME)] "$(LBLUE)
-	$(CC) $(FLAG) -I $(HEADER_PATH) -I $(LIBFT_DIR) -o $(NAME) $(OBJS) \
-		-L./$(LIBFT_DIR) -l$(LIBFT)
-	@printf $(NC)"[$(NAME)] "$(LGREEN)"$(NAME) ready.\n"$(NC)
+	#$(CC) $(FLAG) -I $(HEADER_PATH) -I $(LIBFT_DIR) -o $(NAME) $(OBJS) \
+	#	-L./$(LIBFT_DIR) -l$(LIBFT)
+	gcc -g3  Libft/libft.a srcs/*.c  -I includes -I Libft -o $(NAME)
+#	@printf $(NC)"[$(NAME)] "$(LGREEN)"$(NAME) ready.\n"$(NC)
 
 $(OBJS_PATH)/%.o:
 	@printf "[$(NAME)] "$(LBLUE)

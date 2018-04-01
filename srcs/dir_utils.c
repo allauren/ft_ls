@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 11:31:58 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 11:45:09 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/01 16:51:06 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,30 +73,30 @@ void		get_all_folder(t_list **lst, t_env *env)
 	{
 		print = NULL;
 		c = (t_data*)(*lst)->content;
-			if (c->dir)
-			{
+		if (c->dir)
+		{
 			while ((env->odir = readdir(c->dir)))
 			{
 				if (env->odir->d_name[0] != '.' || OPT.a)
 				{
 					if(!(data = ft_memalloc(sizeof(t_data))))
 						ft_alexis();
-					data->folder = env->odir->d_type ?env->odir->d_type != DT_DIR : 0;
+					data->folder = env->odir->d_type ? env->odir->d_type != DT_DIR : 0;
 					data->name = ft_strdup(env->odir->d_name);
 					data->path = concatpath(c->name, data->name);
 					if(lstat(data->path, &data->buf) == -1 && (data->error = 3))
 						env->current = 1;
 					else if ((!ft_strequ(env->odir->d_name,("."))
-							&& !ft_strequ(env->odir->d_name, (".."))))
+								&& !ft_strequ(env->odir->d_name, (".."))))
 						env->tot += data->buf.st_blocks;
 					ft_lstadd(&print, newlstdata(data));
 				}
 			}
-		ft_lst_merge_sort(&print, &ft_sortalpha);
-		print_dir(env, c, !!print);
-		recucall(&print, &tmp, env, c);
-		get_all_folder(&tmp,env);
-			}
+			ft_lst_merge_sort(&print, &ft_sortalpha);
+			print_dir(env, c, !!print);
+			recucall(&print, &tmp, env, c);
+			get_all_folder(&tmp,env);
+		}
 		else
 		{
 			print_dir(env, c, !!print);
