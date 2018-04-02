@@ -6,46 +6,11 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/31 17:01:42 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 23:53:34 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/02 15:05:04 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
-
-
-void		select_type(mode_t mode, char *c)
-{
-	if ((mode & S_IFREG)== S_IFREG)
-		*c = '-';
-	if ((mode & S_IFDIR) == S_IFDIR)
-		*c = 'd';
-	if ((mode & S_IFCHR) == S_IFCHR)
-		*c = 'c';
-	if ((mode & S_IFBLK) == S_IFBLK)
-		*c = 'b';
-	if ((mode & S_IFLNK) == S_IFLNK)
-		*c = 'l';
-	if ((mode & S_IFSOCK) == S_IFSOCK)
-		*c = 's';
-	if ((mode & S_IFIFO) == S_IFIFO)
-		*c = 'p';
-}
-
-void	print_mode(mode_t mode)
-{
-	const char	chars[] = "rwxrwxrwx";
-	char		buf[10];
-	size_t		i;
-
-	i = 0;
-	while (i < 9)
-	{
-		buf[i] = (mode & (1 << (8 - i))) ? chars[i] : '-';
-		i++;
-	}
-	buf[9] = '\0';
-	ft_printf("%s ", buf);
-}
 
 void		print_all(t_data *val, t_env *env)
 {
@@ -54,7 +19,10 @@ void		print_all(t_data *val, t_env *env)
 
 	c = '-';
 	if (!OPT.l)
-		ft_printf("%s\n", val->path + val->name);
+	{
+		ft_set_values(val->path + val->name, 1);
+		ft_set_values("\n", 1);
+	}
 	else if (val->error != 3)
 	{
 		tmp = ctime(&val->buf.st_mtimespec.tv_sec);
@@ -78,7 +46,17 @@ void		print_all(t_data *val, t_env *env)
 void		print_dir(t_env *env, t_data *data, int i)
 {
 	if(env->pass)
-		ft_printf(env->pass == 1 ? "%s:\n" : "\n%s:\n", NAME) ;
+	{
+		if (OPT.l)
+			ft_printf(env->pass == 1 ? "%s:\n" : "\n%s:\n", NAME) ;
+		else
+		{
+			if (env->pass != 1)
+				ft_set_values("\n", 1);
+			ft_set_values(NAME, 1);
+			ft_set_values(":\n", 1);
+		}
+	}
 	else
 		env->pass = 2;
 	if (OPT.l && i)
@@ -87,6 +65,8 @@ void		print_dir(t_env *env, t_data *data, int i)
 		env->tot = 0;
 		env->current = 0;
 	}
+	if (data->error == 4)
+		ft_wrong_folder(NAME);
 }
 
 void		print_wfolder(t_list **lst, t_env *env)

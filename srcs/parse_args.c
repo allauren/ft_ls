@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 10:03:21 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/01 23:55:44 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/02 13:25:21 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,13 @@ void		isvalidfolder(char *str, t_env *env)
 	if (!(d->dir = opendir(str)) 
 			|| !(d->error = 1))
 		if ((d->folder = 1)
-				&& (d->dir = opendir((path = getfolder_open(str, d)))))
+				&& (d->dir = opendir(path)))
 		{
 			while ((odir = readdir(d->dir)))
 				if (ft_strequ(odir->d_name, d->path + d->name))
 				{
 					d->error = 1;
-					if(lstat(d->path, &d->buf) == -1  &&  d->error++)
+					if(lstat(d->path, &d->buf) == -1  &&  d->error++ && ft_printf("coucou"))
 						ft_wrong_folder(d->path + d->name);
 				}
 		}
