@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/31 17:01:42 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/02 15:05:04 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/02 23:42:56 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,9 @@ void		print_all(t_data *val, t_env *env)
 		print_right(val);
 		print_size(val, c);
 		tmp[ft_strlen(tmp) - 9] = '\0';
-		ft_printf("%10s ", &tmp[4]);
-		if (c == 'l')
+		if ((ft_printf("%10s ", &tmp[4]) && c == 'l') ||
+				!ft_printf("%s\n", val->path + val->name))
 			print_link(val);
-		else
-			ft_printf("%s\n", val->path + val->name);
 	}
 	else
 		ft_wrong_folder(val->path + val->name);
@@ -45,10 +43,10 @@ void		print_all(t_data *val, t_env *env)
 
 void		print_dir(t_env *env, t_data *data, int i)
 {
-	if(env->pass)
+	if (env->pass)
 	{
 		if (OPT.l)
-			ft_printf(env->pass == 1 ? "%s:\n" : "\n%s:\n", NAME) ;
+			ft_printf(env->pass == 1 ? "%s:\n" : "\n%s:\n", NAME);
 		else
 		{
 			if (env->pass != 1)

@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 11:31:58 by allauren          #+#    #+#             */
-/*   Updated: 2018/04/02 15:04:40 by allauren         ###   ########.fr       */
+/*   Updated: 2018/04/03 01:06:40 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ void		recucall(t_list *lst, t_list **dirlst, t_env *env, t_data *c)
 		data = (t_data*)lst->content;
 		print_all(data, env);
 		recucall(lst->next, dirlst, env, c);
-		if (!data->folder && OPT.R && (!OPT.a || (!ft_strequ(NAME, ".")
+		if (!data->folder && is_dir(data->path, &data->buf)
+				&& OPT.br && (!OPT.a || (!ft_strequ(NAME, ".")
 						&& !ft_strequ(NAME, ".."))))
 		{
 			env->dir = opendir(data->path);
@@ -73,7 +74,8 @@ void		get_all_folder(t_list **lst, t_env *env)
 					ft_lstadd(&print, newlstdata(data));
 				}
 		ft_lst_merge_sort(&print, env->fct);
-		print_dir(env, c, !!print);
+		if (OPT.br)
+			print_dir(env, c, !!print);
 		recucall(print, &tmp, env, c);
 		get_all_folder(&tmp, env);
 		*lst = ft_deldate(NULL, *lst, NULL);
